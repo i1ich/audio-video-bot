@@ -19,7 +19,7 @@ from telegram.ext import (
 import moviepy.editor as mpy
 
 # --------------------- Конфигурация ---------------------
-TOKEN = "8459591176:AAFILVoiI_EzJJvUEeGWtM17AriUL-eqKps"  # ← Замените на токен вашего бота
+TOKEN = os.getenv("BOT_TOKEN")
 TEMP_DIR = Path("temp")
 TEMP_DIR.mkdir(exist_ok=True)
 
