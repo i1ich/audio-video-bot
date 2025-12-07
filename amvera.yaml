@@ -1,0 +1,22 @@
+version: "1"
+name: telegram-bot
+type: application
+description: Telegram bot for audio-video replacement
+
+runtime:
+  name: python
+  version: "3.12"  # Или ваша версия Python
+
+build:
+  path: .  # Корень репозитория
+  image: python:3.12-slim  # Базовый образ
+
+deploy:
+  replicas: 1  # Количество экземпляров
+  resources:
+    cpu: 100m  # Минимальные ресурсы (адаптируйте под нагрузку)
+    memory: 256Mi
+  env:
+    - name: BOT_TOKEN
+      value: ""  # Укажите токен в интерфейсе Amvera позже
+
